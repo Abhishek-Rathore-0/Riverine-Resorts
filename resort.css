@@ -1,0 +1,164 @@
+header{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url("gallery3.jpg");
+}
+
+/*-----------------------------------------Rooms-------------------------------------------------------*/
+.div-group{
+    width: 100%;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:repeat(3,24rem);
+    justify-content: center;
+}
+.div-group .box1{
+    position: relative;
+    width: 360px;
+    height: 188px;
+    cursor: pointer ;
+    border: 0.2px solid grey;
+    box-shadow: 2px 2px lightgrey;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.div-group .box1:hover{
+    transform:scale(1.1);
+    transition:.5s all;
+}
+.box1 .h3{
+    color:white;
+    margin: 20px 0;
+    font-family: roboto-head;
+    text-align: center;
+    font-size: 25px;
+    text-shadow:1.4px 1.4px darkgrey;
+    font-style:bold;
+}
+.box1 .desc{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow:1px 1px rgb(40, 40, 40);
+    
+}
+#a1{
+    cursor: pointer;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y:auto;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1002;
+    background-color: rgb(250,250,250);
+    width: 800px;
+    height: 540px;
+    max-width: 80%;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1); 
+}
+.modal-heading{
+    padding: 10px 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 1.28rem;
+    font-family:roboto-head;
+    font-weight: bold;
+}
+.modal-heading .close-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+.modal .modal-body{
+    padding: 10px 15px;
+    text-align:justify;
+    line-height: 23px;
+    font-family: roboto;
+    font-size: 18px;
+}
+.modal .modal-body .desc{
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: justify;
+}
+/*----------------------------------------------Packages----------------------------------------------*/
+.flex1{
+    display:flex;
+    padding:0 50px 0 0;
+    justify-content: space-between;
+}
+/*-----------------------------------------------gallery-------------------------------------------------*/
+.gallery{
+    margin-top: 15px;
+}
+.gallery a img{
+    width:375px;
+    height:200px;
+    padding: 10px 10px;
+    margin: 0;
+}
+.gallery a img:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+/*-----------------------------------------------FAq-------------------------------------------------*/
+.ques{
+    line-height: 28px;
+    width: 100%;
+    max-width:80rem;
+    border:0px black solid ;
+    margin: 10px 0;
+}
+
+.faq1{
+    position: relative;
+    background-color:rgb(240, 240,240);
+    width: 100%;
+    font-size: 22px;
+    display:flex;
+    align-items: center;
+    padding: 18px 25px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sty{
+    position: relative;
+    border: 2px solid  rgb(240, 240,240);
+    border-top: 0px;
+    margin: 1px;
+    font-size: 20px;
+    padding: 5px 15px 14px 25px;
+    line-height: 28px;
+}
+.faq1 .fa-plus{
+    display: block;
+}
+.faq1 .fa-plus.active{
+    display:none;
+}
+.faq1 .fa-minus{
+    display: none;
+}
+.faq1 .fa-minus.active{
+    display:block;
+}
+.answer{
+    display: none;
+}
+.show{
+    display: block;
+}

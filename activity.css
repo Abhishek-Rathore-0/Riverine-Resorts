@@ -1,0 +1,172 @@
+
+header{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url("activities-bg1.jpg")center;
+}
+
+/*-----------------------------------------Rooms-------------------------------------------------------*/
+.div-group{
+    width: 100%;
+    margin:10px auto;
+    display:grid;
+    grid-template-columns:repeat(3,23.3rem);
+    justify-content: center;
+}
+.div-group .box1{
+    position: relative;
+    width: 350px;
+    height: 260px;
+    cursor: pointer ;
+    margin-top: 20px;
+    border: 0.2px solid grey;
+    box-shadow: 2px 2px lightgrey;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.div-group .box1:hover{
+    transform:scale(1.1);
+    transition:.5s all;
+}
+
+.box1 .desc{
+    color: white;
+    margin-top: 210px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+#a1{
+    cursor: pointer;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y:auto;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 0.2px solid grey;
+    border-radius: 4px;
+    z-index: 1002;
+    background-color: rgb(250,250,250);
+    width: 800px;
+    height: 540px;
+    max-width: 80%;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1); 
+}
+.modal-heading{
+    padding: 10px 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 1.28rem;
+    font-family:roboto-head;
+    font-weight: bold;
+}
+.modal-heading .close-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+.modal .modal-body{
+    font-size: 18px;
+    padding: 10px 15px;
+    text-align:justify;
+    line-height: 23px;
+    font-family: roboto;
+}
+.modal .modal-body .desc{
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: justify;
+}
+/*-----------------------------------------------FAq-------------------------------------------------*/
+
+.ques{
+    line-height: 28px;
+    width: 100%;
+    max-width:80rem;
+    border:0px black solid ;
+    margin: 10px 0;
+}
+
+.faq1{
+    position: relative;
+    background-color:rgb(240, 240,240);
+    width: 100%;
+    font-size: 22px;
+    display:flex;
+    align-items: center;
+    padding: 18px 25px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sty{
+    position: relative;
+    border: 2px solid  rgb(240, 240,240);
+    border-top: 0px;
+    margin: 1px;
+    font-size: 20px;
+    padding: 5px 15px 14px 25px;
+    line-height: 28px;
+}
+.faq1 .fa-plus{
+    display: block;
+}
+.faq1 .fa-plus.active{
+    display:none;
+}
+.faq1 .fa-minus{
+    display: none;
+}
+.faq1 .fa-minus.active{
+    display:block;
+}
+.answer{
+    display: none;
+}
+.show{
+    display: block;
+}
+@media (max-width: 1128px){
+    .div-group{
+        width: 100%;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(2,23rem);
+        justify-content: center;
+    }
+    .center{
+        margin-top: 10px;
+        transition: 1s all;
+        margin-bottom: 10px;
+        margin-left:0;
+    }
+    .right{
+        margin-left:0;
+    }
+    .center .line{
+        margin-left: 0px;
+    }
+    nav ul{
+        display:none;
+        transition: .5s;
+    }
+}
+@media (max-width: 770px){
+    .div-group{
+        width: 100%;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(1,23rem);
+        justify-content: center;
+    }
+}

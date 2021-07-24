@@ -1,0 +1,307 @@
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url("bg3.jpg")center;
+    background-size:cover;
+    background-attachment: fixed;
+    display: table;
+}
+/*-----------------------------------------ptv--------------------------------------------------------*/
+.div-group{
+    width: 100%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,22.5rem);
+    justify-content: center;
+}
+.box1 .desc button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.15rem;
+}
+.div-group .box1{
+    margin: 10px auto;
+    padding: 10px 10px;
+    position: relative;
+    width: 340px;
+    height: 300px;
+    background-color: white;
+    border: 0.1px solid lightgrey;
+    box-shadow: 0.7px 0.7px lightgrey;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.div-group .box1:hover{
+    background-color: rgb(240,240,240);
+    transform:scale(1.1);
+    transition:.5s all;
+    transition: .1s;
+}
+.h3{
+    font-family: roboto-head;
+    text-align: center;
+    font-style:bold;
+}
+.desc{
+    text-align: justify;
+    line-height: 22px;
+}
+.im1{
+    margin:10px auto;
+    width: 320px;
+    height: 150px;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y:auto;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1002;
+    background-color: rgb(250,250,250);
+    width: 800px;
+    height: 540px;
+    max-width: 80%;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1); 
+}
+.modal-heading{
+    padding: 10px 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 1.25rem;
+    font-family:roboto-head;
+    font-weight: bold;
+}
+.modal-heading .close-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+}
+.modal .modal-body{
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: roboto;
+    text-align:justify;
+}
+.modal .modal-body img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+/*----------------------------------------------review----------------------------------------------*/
+textarea::-webkit-input-placeholder{
+   font-size: 18px;
+   color:#136aa3;
+}
+textarea{
+    font-size: 18px;
+    color:#136aa3;
+    padding: 10px;
+}
+.fle{
+    display: flex;
+}
+.im img{
+    width: 230px;
+}
+.ask .fle .im img{
+    width: 180px;
+    margin:0 50px 0 10px;
+}
+.tex button{
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    box-shadow:1px 1.5px #0e3d5c;
+    color:#136aa3;
+    cursor: pointer;
+}
+
+.tex button:hover{
+    transition: all .5s;
+    background-color:#136aa3;
+    color: rgb(240,240,240);
+}
+
+/*--------------------------------popup----------------------------*/
+
+.modal1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y:auto;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1002;
+    background-color: rgb(250,250,250);
+    width: 380px;
+    height: 340px;
+    max-width: 80%;
+}
+.modal1.active{
+    transform: translate(-50%,-50%) scale(1); 
+}
+.modal1 .modal-heading{
+    padding: 10px 15px;
+    color: #136aa3;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 1.9rem;
+    font-family:roboto;
+    font-weight: bold;
+}
+.modal-heading .close-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.9rem;
+}
+.modal1 .modal-body{
+    margin:20px 65px;
+    font-size: 25px;
+    line-height: 23px;
+    font-family: roboto;
+}
+
+.modal1 .modal-body input{
+    font-size: 22px;
+    padding:2px ;
+    font-family: roboto;
+    line-height: 23px;
+    height: 34px;
+    margin-top: 7px;
+    margin-bottom: 11px;
+    font-family: roboto;  
+}
+.modal1 .modal-body button{    
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color:#136aa3;
+    cursor: pointer;
+}
+.modal1 .modal-body button:hover{
+    transition: all .5s;
+    background-color:#136aa3;
+    color: rgb(240,240,240);
+}
+
+@media (max-width: 1225px){
+    nav ul{
+        display:none;
+        transition: .5s;
+    }
+    .center{
+        transition: .6s;
+        margin-left: 120px;
+    }
+    .div-group{
+        width: 100%;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(2,23rem);
+        justify-content: center;
+    }
+}
+@media (max-width:1065px){
+    .center{
+        transition: .6s;
+        margin-left: 90px;
+    }
+    .right{
+        margin-left:50px;
+        transition: 1s all;
+    }
+}
+@media (max-width:900px){
+    .main-content{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .center{
+        margin-top: 10px;
+        transition: 1s all;
+        margin-bottom: 10px;
+        margin-left:0;
+    }
+    .right{
+        margin-left:0;
+        transition: 1s all;
+    }
+    .center .line{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 870px){
+    .div-group{
+        width: 100%;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(1,23rem);
+        justify-content: center;
+    }
+    textarea{
+        width: 350px;
+    }
+    .mar{
+        margin :20px 100px;
+    }
+}
+/*------------------------------------review-------------------------*/
+.main{
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+    width: 1000px;
+}
+.rev{
+    margin: 10px 20px;
+    padding: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+    width: 320px;
+    display: flex;
+    box-shadow: rgb(182, 181, 181) 1px 1px 7px 2px;
+    flex-direction: column;
+}
+.rev:hover{
+    background-color: #136aa3;
+    color: white;
+    transform:scale(1.06);
+    transition: .3s;
+}
+.rev p{
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 140px;
+    bottom: 20px;
+}
+.rev .im{
+    width:70px;
+    height:48px;
+}

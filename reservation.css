@@ -1,0 +1,173 @@
+header{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url("reservebg1.jpg")center;
+}
+/*-----------------------------------------------------------------*/
+.content{
+    box-align: center;
+    width: 800px;
+    margin: 15px auto;
+    line-height: 30px;
+    border: #136aa3 solid 1px;
+    padding: 25px;
+    font-size: 24px;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    margin:20px 20px 20px 0px;
+}
+.col1{
+    margin :0 15px 25px 15px;
+}
+input[type=date]{
+    width :227px;
+}
+select,input[type=number]{
+    height: 30px;
+    width: 200px;
+}
+input[type=email]{
+    width: 290px;
+}
+input[type=radio]{
+    vertical-align: top;
+    margin-right: 5px;
+    margin-left: 14px;
+}
+input,select option{
+    height: 30px;
+    font-family: roboto;
+    font-size: 18px;
+    padding: 10px;
+}
+select{
+    font-size: 18px;
+    padding-left: 8px;
+    font-family: roboto;
+}
+
+button{
+    font-size: 20px;
+    width: 227px;
+    height: 40px;
+    background-color: transparent;
+    color:#136aa3;
+    cursor: pointer;
+
+}
+
+button:hover{
+    transition: all .5s;
+    background-color:#136aa3;
+    color: rgb(240,240,240);
+}
+button[type=reset]:hover{
+    background-color: rgb(145, 14, 14);
+}
+/*--------------------------------Cancal Button---------------------------*/
+.can{
+    text-align: center;
+}
+.cancel{
+    height: 40px;
+    padding:0px 10px;
+    font-size: 20px;
+    width: 227px;
+    background-color: transparent;
+    color:#136aa3;
+    cursor: pointer;
+    
+}
+.cancel:hover{
+    transition: all .5s;
+    background-color:#136aa3;
+    color: rgb(240,240,240);
+}
+/*---------------------------------------modal-----------------------------------*/
+.moda.active{
+    transform: translate(-50%,-50%) scale(1);   
+}
+.moda{
+    width: 700px;
+    height: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y:auto;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1002;
+    background-color: rgb(250,250,250);
+}
+.modahead{
+    padding: 10px 24px 0px 20px;
+    color: #136aa3;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family:roboto;
+}
+.modahead .close-button
+{
+    width: 30px;
+    display: inline-block;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    font-size: 2.2rem;
+}
+.moda .content{
+    width: 650px;
+    font-family: Roboto;
+    height:350px;
+}
+.moda .content input,.moda .content button{
+    width: 280px;
+}
+/*-------------------card-------------------------*/
+.card{
+    border: 0.7px solid grey;
+    width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+    display: none;
+}
+.display{
+    display: block;
+    transition: all .7s;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+}
+
+.col1 input{
+   width: 270px;
+}
+.small input{
+    width: 100px;
+}
+.card input::-webkit-outer-spin-button,
+.card input::-webkit-inner-spin-button,
+.num input::-webkit-outer-spin-button,
+.num input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card input[type=number] ,.num input[type=number]{
+  -moz-appearance: textfield;
+}
+.card .col1 img{
+    width: 200px;
+    height: 30px;
+}

@@ -1,0 +1,214 @@
+@font-face{
+    src:url(Roboto-Regular.ttf);
+    font-family:roboto;
+}
+@font-face{
+    src: url(Futura\ Heavy\ font.ttf);
+    font-family: futura;
+}
+@font-face{
+    src: url(Roboto-Black.ttf);
+    font-family:roboto-head;
+}
+@font-face{
+    src: url(Roboto-Medium.ttf);
+    font-family: roboto-medium;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::before,*::after{
+    box-sizing: border-box;
+}
+.mar{
+    margin :40px 100px;
+}
+.subhead{
+    font-size: 40px;
+    font-family: roboto-head;
+    color:#136aa3;
+    margin-bottom:5px;
+}
+/*-------------------------------------------Navigation------------------------------------------------------*/
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;   
+    font-family:roboto;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 120px;
+    padding: 10px 70px;
+    transition: .5s;
+    z-index:1000;
+}
+nav.black{
+    background:rgb(40, 35, 35);
+    height: 65px;
+    padding: 10px 40px;
+}
+nav .logo{
+    float: left;
+    width: 360px;
+    height: 120px;
+    margin-top: -20px;
+    margin-left: -90px;
+    transition: .5s;
+}
+nav.black .logo{
+    margin-top: -23px;
+    margin-left:-50px;
+    width: 270px;
+    height: 90px;	
+}
+
+nav ul{
+    display: flex;
+    float: right;
+    margin-top: 30px;
+    margin-right: -45px;
+    transition: .5s;
+}
+nav.black ul{
+    margin-top: 10px;
+    margin-right: -20px;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 15px;
+    font-size: 21px;
+    transform: translateX(0rem);
+}
+nav ul li a{
+	text-decoration: none;
+    color: #eee;
+    transition: .5s;
+}
+
+nav ul li a::before,
+nav ul li a::after
+{
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+    left: 0;
+    background-color:white;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+.active{
+    font-family:roboto-head;
+    font-size: 23px;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after
+{
+    transform: scaleX(1);
+}
+
+
+/*-----------------------------------------------Title-------------------------------------------------*/
+header{
+    width: 100%;
+    height: 100vh;
+    background-size:cover;
+    background-attachment: fixed;
+    display: table;
+}
+.title{
+    font-family: futura;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
+.head{
+    font-size: 90px;
+}
+.weather{
+    font-size: 30px;
+}
+.title_text{
+    position: relative;
+    text-align: justify;
+    font-size: 20px;
+    word-spacing: 3px;
+    line-height: 28px;
+}
+
+/*-----------------------------------------------Footer-------------------------------------------------*/
+.box{
+    width: 200px;
+    text-align: center;
+    margin: 1.5px;
+    margin-left: 20px;
+}
+.main-content
+{
+    display: flex;
+    background-color: rgb(40, 35, 35);
+    padding:0 25px 0 0;
+    color: white;
+    justify-content: space-between;
+}
+.main-content .left img{
+    height: 60px; 
+    width: 300px;
+    margin-top:10px;
+    margin-left:-35px;
+}
+.center .social{
+    margin-top: 1.5px;
+}
+.center .social a{
+    padding: 0 2px;
+}
+.center .social a span{
+    height: 40px;
+    width: 40px;
+    color: white;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.center .social a span:hover{
+    background:#136aa3;
+}
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,.8);
+    opacity:0;
+    pointer-events:none;
+    z-index:1001;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events:all;
+}
